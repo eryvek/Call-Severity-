@@ -17,15 +17,15 @@ food_words = ['food']
 medical_words = ['medicine']
 rescue_words = ['rescue']
 
-# r = sr.Recognizer()
-# r.energy_threshold = 1000
-# mic = sr.Microphone()
-# with mic as source:
-#     print("Say something...")
-#     audio = r.listen(source)
-#
-# isaid = r.recognize_google(audio)
-isaid = "Im from mumbai i need food medicine food rescue"
+r = sr.Recognizer()
+r.energy_threshold = 1000
+mic = sr.Microphone()
+with mic as source:
+    print("Say something...")
+    audio = r.listen(source)
+
+isaid = r.recognize_google(audio)
+# isaid = "Im from mumbai i need food medicine food rescue"
 list_of_words = isaid.split(" ")
 said_cities = []
 print("Call converted to text : "+isaid)
